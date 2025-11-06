@@ -1,0 +1,22 @@
+<div class="box">
+  <h3>Form Validataion</h3>
+
+  <form [formGroup]="validataForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name: </label>
+      <input name="name" placeholder="Enter Your Name" formControlName="name" required />
+      @if(validataForm.get('name')?.invalid && validataForm.get('name')?.touched){
+      <div class="error">Name is Required</div>
+      }
+    </div>
+    <div>
+      <label for="email">Email: </label>
+      <input name="userEmail" type="text" placeholder="Enter Your Email" formControlName="email" />
+
+      @if(validataForm.get("email")?.hasError("email")){
+      <div class="error">Enter Valid Email</div>
+      }
+    </div>
+    <button [disabled]="validataForm.invalid" type="submit">Submit</button>
+  </form>
+</div>

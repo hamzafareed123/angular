@@ -1,0 +1,7 @@
+<div class="box">
+    <h1>Parent Component</h1>
+  <p>Sending Data From Parent</p>
+  <app-child-component [message]="message" (Clicked)="onChildClick($event)"></app-child-component>
+
+  <p>Message From Child is: {{ childMessage }}</p>
+</div>

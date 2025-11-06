@@ -1,0 +1,16 @@
+.box {
+  width: 400px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+
+}
+
+button{
+    padding:10px;
+    background:blue;
+    color:white;
+    border:1px solid;
+    crusor:pointer;
+    border-raduis:10px
+}
